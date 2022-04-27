@@ -55,7 +55,7 @@ bottomDropdown.addEventListener('change', () => {
 
 catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
-    
+    console.log('clicking add', catchphraseInput.value);
     // push the new catchphrase to the catchphrase array in state
 
     // clear out the form input's value so it's empty to the user
@@ -66,7 +66,7 @@ catchphraseButton.addEventListener('click', () => {
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
-
+    reportEl.textContent = `You have changed the head ${headCount} times, the middle ${middleCount} times and the bottom ${bottomCount} times.`;
 }
 
 function displayCatchphrases() {
