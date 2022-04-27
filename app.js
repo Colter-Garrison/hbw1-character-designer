@@ -11,38 +11,46 @@ const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
 
 // set state for how many times the user changes the head, middle, and bottom
+let headCount = 0;
+let middleCount = 0;
+let bottomCount = 0;
+
 // set state for all of the character's catchphrases
+let catchphrases = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
-
+    console.log('changing select', headDropdown.value);
     // increment the head change count state
-    
+    headCount++;
     // update the dom for the head (use style.backgroundImage on the headEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    headEl.style.backgroundImage = `url('./assets/${headDropdown.value}.png')`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
 middleDropdown.addEventListener('change', () => {
     // get the value of the middle dropdown
-
+    console.log('changing select', middleDropdown.value);
     // increment the middle change count state
-    
+    middleCount++;
     // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    middleEl.style.backgroundImage = `url('./assets/${middleDropdown.value}.png')`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
 bottomDropdown.addEventListener('change', () => {
     // get the value of the bottom dropdown
-
+    console.log('changing select', bottomDropdown.value);
     // increment the bottom change count state
-    
+    bottomCount++;
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-
-    // update the stats to show the new count (call displayStats() to do this work)
+    bottomEl.style.backgroundImage = `url('./assets/${bottomDropdown.value}.png')`
+    // update the stats to show the new count (call displayStats() to do this work)    
+    displayStats();
 });
 
 catchphraseButton.addEventListener('click', () => {
@@ -58,6 +66,7 @@ catchphraseButton.addEventListener('click', () => {
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
+
 }
 
 function displayCatchphrases() {
