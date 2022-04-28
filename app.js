@@ -6,7 +6,7 @@ const headEl = document.getElementById('head');
 const middleEl = document.getElementById('middle');
 const bottomEl = document.getElementById('bottom');
 const reportEl = document.getElementById('report');
-const catchphrasesEl = document.getElementById('catchphrases');
+// const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
 
@@ -48,7 +48,7 @@ bottomDropdown.addEventListener('change', () => {
     // increment the bottom change count state
     bottomCount++;
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-    bottomEl.style.backgroundImage = `url('./assets/${bottomDropdown.value}.png')`
+    bottomEl.style.backgroundImage = `url('./assets/${bottomDropdown.value}.png')`;
     // update the stats to show the new count (call displayStats() to do this work)    
     displayStats();
 });
