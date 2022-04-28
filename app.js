@@ -57,7 +57,9 @@ catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
     console.log('clicking add', catchphraseInput.value);
     // push the new catchphrase to the catchphrase array in state
-
+    catchphrases.push(catchphrasesEl.value);
+    console.log(catchphrases);
+    displayCatchphrases();
     // clear out the form input's value so it's empty to the user
    
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
